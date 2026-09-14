@@ -1,0 +1,89 @@
+.cta-banner {
+  background-color: var(--classic-blue);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cta-abstract-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 200px;
+  border: 1px solid rgba(179, 222, 248, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 48px;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.cta-text {
+  font-size: 20px;
+  color: var(--powder-blue);
+  opacity: 0.9;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cta-btn-primary {
+  background-color: var(--white);
+  color: var(--classic-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(179, 222, 248, 0.5), transparent);
+  transform: skewX(-20deg);
+}
+
+.cta-btn-primary:hover::after {
+  left: 150%;
+  transition: all 0.6s ease;
+}
+
+.cta-btn-secondary {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--classic-blue);
+}
+
+.cta-btn-secondary:hover {
+  background-color: var(--powder-blue);
+  border-color: var(--powder-blue);
+  color: var(--classic-blue);
+}
+
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 36px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+}
