@@ -48,7 +48,7 @@ export function Navbar() {
           end: "80px top",
           scrub: true,
         },
-        height: "70px",
+        height: "76px",
         backgroundColor: "rgba(255, 255, 255, 0.98)",
         boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)",
         ease: "none"
@@ -72,7 +72,7 @@ export function Navbar() {
           end: "80px top",
           scrub: true,
         },
-        height: "70px",
+        height: "76px",
         backgroundColor: "rgba(255, 255, 255, 0.98)",
         boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)",
         ease: "none"
@@ -108,10 +108,6 @@ export function Navbar() {
       <div className="container navbar-container">
         <Link to="/#home" onClick={scrollToTop} className="logo-link">
           <img src={logoImage} alt="YUVA B2B SUPPLIES Logo" className="nav-logo" />
-          <div className="logo-text-wrapper">
-            <span className="logo-text">YUVA</span>
-            <span className="logo-sub">B2B SUPPLIES</span>
-          </div>
         </Link>
 
         <nav className="desktop-nav">

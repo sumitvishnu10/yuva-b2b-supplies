@@ -22,70 +22,63 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
-  height: auto;
+  height: 100%;
   text-decoration: none;
   transition: transform var(--transition-smooth);
-}
-
-.logo-text-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-text {
-  font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  line-height: 1;
-  color: var(--blue-slate);
-  transition: font-size var(--transition-smooth);
-}
-
-.logo-sub {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--classic-blue);
-  text-transform: uppercase;
-  transition: font-size var(--transition-smooth);
 }
 
 .nav-logo {
   display: block;
   width: auto;
-  max-width: 140px;
-  height: 52px; /* strict bounding box */
+  max-width: 160px;
+  height: 52px;
   object-fit: contain;
-  margin-left: -24px; /* Offset the 1-inch transparent space inside the PNG itself */
+  margin-left: -24px;
   transition: height var(--transition-smooth);
 }
 
 .navbar.scrolled .nav-logo {
-  height: 44px; /* Slightly scale down when scrolled */
+  height: 44px;
 }
 
-.navbar.scrolled .logo-text {
-  font-size: 20px;
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.navbar.scrolled .logo-sub {
-  font-size: 8px;
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 .nav-links {
   display: flex;
+  align-items: center;
+  height: 100%;
   gap: 32px;
 }
 
+.nav-links li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .nav-links a {
+  display: flex;
+  align-items: center;
+  height: 100%;
   font-size: 15px;
   font-weight: 500;
   color: var(--blue-slate);
@@ -104,10 +97,10 @@
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: var(--classic-blue);
   transform: scaleX(0);
   transform-origin: right;
@@ -139,7 +132,7 @@
   .nav-logo {
     height: 48px;
   }
-  
+
   .navbar.scrolled .nav-logo {
     height: 40px;
   }
@@ -194,20 +187,8 @@
     height: 40px;
   }
 
-  .logo-text {
-    font-size: 20px;
-  }
-
-  .logo-sub {
-    font-size: 8px;
-  }
-
   .navbar.scrolled .nav-logo {
     height: 36px;
-  }
-
-  .navbar.scrolled .logo-text {
-    font-size: 18px;
   }
 }
 
