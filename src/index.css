@@ -191,6 +191,7 @@ textarea:focus {
 /* Section styling */
 section {
   padding: 96px 0;
+  scroll-margin-top: 90px;
 }
 
 .section-label {
