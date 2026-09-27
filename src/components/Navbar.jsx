@@ -80,7 +80,7 @@ export function Navbar() {
     });
 
     // ScrollSpy Logic (Run regardless of reduced motion)
-    const sections = ['home', 'about', 'products', 'industries', 'why-us', 'contact'];
+    const sections = ['home', 'about', 'industries', 'products', 'why-us', 'contact'];
     sections.forEach(id => {
       const el = document.getElementById(id);
       if (el) {
@@ -123,8 +123,8 @@ export function Navbar() {
           <ul className="nav-links">
             <li><Link to="/#home" className={activeSection === 'home' ? 'active' : ''}>Home</Link></li>
             <li><Link to="/#about" className={activeSection === 'about' ? 'active' : ''}>About</Link></li>
-            <li><Link to="/#products" className={activeSection === 'products' ? 'active' : ''}>Products</Link></li>
             <li><Link to="/#industries" className={activeSection === 'industries' ? 'active' : ''}>Industries</Link></li>
+            <li><Link to="/#products" className={activeSection === 'products' ? 'active' : ''}>Products</Link></li>
             <li><Link to="/#why-us" className={activeSection === 'why-us' ? 'active' : ''}>Why Us</Link></li>
             <li><Link to="/#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</Link></li>
           </ul>
@@ -144,8 +144,8 @@ export function Navbar() {
         <ul className="mobile-nav-links">
           <li><Link to="/#home" onClick={toggleMenu} className={activeSection === 'home' ? 'active' : ''}>Home</Link></li>
           <li><Link to="/#about" onClick={toggleMenu} className={activeSection === 'about' ? 'active' : ''}>About</Link></li>
-          <li><Link to="/#products" onClick={toggleMenu} className={activeSection === 'products' ? 'active' : ''}>Products</Link></li>
           <li><Link to="/#industries" onClick={toggleMenu} className={activeSection === 'industries' ? 'active' : ''}>Industries</Link></li>
+          <li><Link to="/#products" onClick={toggleMenu} className={activeSection === 'products' ? 'active' : ''}>Products</Link></li>
           <li><Link to="/#why-us" onClick={toggleMenu} className={activeSection === 'why-us' ? 'active' : ''}>Why Us</Link></li>
           <li><Link to="/#contact" onClick={toggleMenu} className={activeSection === 'contact' ? 'active' : ''}>Contact</Link></li>
         </ul>

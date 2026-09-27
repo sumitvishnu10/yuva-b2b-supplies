@@ -1,18 +1,16 @@
-import { useState, useRef } from 'react';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { Paperclip, Droplet, FlaskConical, PackageOpen, HardHat, Coffee, ArrowRight } from 'lucide-react';
+import { Paperclip, Droplet, FlaskConical, PackageOpen, HardHat, Coffee } from 'lucide-react';
 import './Products.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function Products() {
-  const navigate = useNavigate();
   const location = useLocation();
   const productsRef = useRef(null);
-  const [transitioningCard, setTransitioningCard] = useState(null);
 
   const categories = [
     {
@@ -112,11 +110,8 @@ export function Products() {
       const cards = gsap.utils.toArray(".product-card");
       cards.forEach(card => {
         const icon = card.querySelector(".card-icon");
-        const arrow = card.querySelector(".card-arrow");
-
         const hoverTl = gsap.timeline({ paused: true, defaults: { ease: "power2.out", duration: 0.3 } });
-        hoverTl.to(icon, { scale: 1.02, y: -2 }, 0)
-               .to(arrow, { x: 4 }, 0);
+        hoverTl.to(icon, { scale: 1.02, y: -2 }, 0);
 
         card.addEventListener("mouseenter", () => hoverTl.play());
         card.addEventListener("mouseleave", () => hoverTl.reverse());
@@ -124,32 +119,7 @@ export function Products() {
     });
   }, { scope: productsRef, dependencies: [location.pathname] });
 
-  const handleCardClick = (e, slug) => {
-    e.preventDefault();
-    const cardEl = e.currentTarget;
-    setTransitioningCard(slug);
 
-    // Premium connected page transition (Subtle Fade)
-    const tl = gsap.timeline({
-      onComplete: () => {
-        navigate(`/products/${slug}`);
-        window.scrollTo(0, 0); // Ensure scroll is at top for new page
-      }
-    });
-
-    tl.to(cardEl, {
-      borderColor: "var(--classic-blue)",
-      backgroundColor: "var(--powder-blue)",
-      duration: 0.4,
-      ease: "power2.out"
-    })
-      .to(productsRef.current, {
-        opacity: 0,
-        y: -15, // Max 30px translation rule
-        duration: 0.5, // 500ms duration rule
-        ease: "power2.inOut"
-      }, 0);
-  };
 
   return (
     <section id="products" className="products" ref={productsRef}>
@@ -170,12 +140,10 @@ export function Products() {
 
         <div className="products-grid">
           {categories.map((cat) => (
-            <Link
+            <div
               key={cat.id}
-              to={`/products/${cat.slug}`}
-              className={`product-card ${transitioningCard === cat.slug ? 'is-transitioning' : ''}`}
-              onClick={(e) => handleCardClick(e, cat.slug)}
-              style={{ textDecoration: 'none', display: 'flex' }}
+              className="product-card"
+              style={{ display: 'flex' }}
             >
               <div className="card-content-wrapper">
                 <div className="card-header">
@@ -184,12 +152,8 @@ export function Products() {
                 </div>
                 <h3 className="card-title">{cat.title}</h3>
                 <p className="card-desc">{cat.desc}</p>
-                <div className="card-footer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
-                  <span className="card-view-text">Explore &rarr;</span>
-                  <ArrowRight size={20} className="card-arrow" />
-                </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

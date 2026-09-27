@@ -12,7 +12,7 @@
   --bg-lightgray: rgba(179, 222, 248, 0.15);
   /* Very light blue tint */
 
-  --text-main: var(--blue-gray);
+  --text-main: var(--classic-blue);
   --text-heading: var(--blue-slate);
   --border-subtle: var(--powder-blue);
 

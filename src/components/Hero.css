@@ -63,7 +63,7 @@
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 3px;
-  color: var(--blue-gray);
+  color: var(--classic-blue);
   margin-bottom: 24px;
   display: block;
 }
@@ -107,7 +107,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--blue-gray);
+  color: var(--classic-blue);
 }
 
 .hero-hub-wrapper {

@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
-import { ProductDetail } from './pages/ProductDetail';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     // Ensure ScrollTrigger recalculates page height on route change
     setTimeout(() => ScrollTrigger.refresh(), 100);
-    
+
     // Handle hash scrolling
     if (location.hash) {
       setTimeout(() => {
@@ -72,7 +72,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products/:categoryId" element={<ProductDetail />} />
       </Routes>
       <Footer />
     </div>

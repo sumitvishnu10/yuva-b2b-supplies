@@ -27,9 +27,9 @@ export function Home() {
     <main ref={mainRef}>
       <Hero />
       <About />
-      <Products />
-      <Industries />
       <VisionMission />
+      <Industries />
+      <Products />
       <Difference />
       <CTABanner />
       <Contact />

@@ -1,5 +1,6 @@
 .why-us {
-  background-color: var(--bg-lightgray); /* Light blue tint */
+  background-color: var(--bg-lightgray);
+  /* Light blue tint */
   border-bottom: 1px solid rgba(88, 161, 211, 0.1);
 }
 
@@ -48,7 +49,7 @@
 
 .feature-desc {
   font-size: 18px;
-  color: var(--blue-gray);
+  color: var(--classic-blue);
   line-height: 1.6;
 }
 

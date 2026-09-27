@@ -44,7 +44,8 @@
 .form-group input,
 .form-group textarea {
   padding: 16px;
-  border: 1px solid rgba(88, 161, 211, 0.3); /* Blue Gray borders */
+  border: 1px solid rgba(88, 161, 211, 0.3);
+  /* Blue Gray borders */
   border-radius: 4px;
   font-family: var(--font-body);
   font-size: 16px;
@@ -56,7 +57,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--blue-gray); /* Input focus: Blue Gray */
+  border-color: var(--blue-gray);
+  /* Input focus: Blue Gray */
   background-color: var(--white);
   box-shadow: 0 0 0 3px rgba(88, 161, 211, 0.15);
 }
@@ -68,7 +70,8 @@
 }
 
 .contact-info-card {
-  background-color: rgba(179, 222, 248, 0.15); /* Subtle Powder Blue background */
+  background-color: rgba(179, 222, 248, 0.15);
+  /* Subtle Powder Blue background */
   color: var(--blue-slate);
   padding: 48px;
   border-radius: 4px;
@@ -85,7 +88,8 @@
 }
 
 .info-icon {
-  color: var(--classic-blue); /* Classic Blue */
+  color: var(--classic-blue);
+  /* Classic Blue */
   margin-top: 4px;
 }
 
@@ -94,7 +98,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: var(--blue-gray);
+  color: #B3DEF8;
   margin-bottom: 4px;
 }
 
