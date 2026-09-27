@@ -148,7 +148,6 @@ export function Products() {
               <div className="card-content-wrapper">
                 <div className="card-header">
                   <div className="card-icon">{cat.icon}</div>
-                  <span className="card-number">{cat.id}</span>
                 </div>
                 <h3 className="card-title">{cat.title}</h3>
                 <p className="card-desc">{cat.desc}</p>

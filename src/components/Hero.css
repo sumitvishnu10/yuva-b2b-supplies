@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   min-height: auto;
-  padding-top: 84px;
+  padding-top: 90px;
   /* Clear navbar exactly */
   display: flex;
   flex-direction: column;

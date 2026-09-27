@@ -49,7 +49,7 @@ export function Navbar() {
           scrub: true,
         },
         height: "80px",
-        backgroundColor: "rgba(255, 255, 255, 0.98)",
+        backgroundColor: "#ffffff",
         boxShadow: "0 4px 20px rgba(88, 161, 211, 0.15)",
         ease: "none"
       });
@@ -73,7 +73,7 @@ export function Navbar() {
           scrub: true,
         },
         height: "80px",
-        backgroundColor: "rgba(255, 255, 255, 0.98)",
+        backgroundColor: "#ffffff",
         boxShadow: "0 4px 20px rgba(88, 161, 211, 0.15)",
         ease: "none"
       });

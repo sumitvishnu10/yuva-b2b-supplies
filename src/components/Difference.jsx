@@ -96,15 +96,15 @@ export function Difference() {
             </p>
           </div>
 
-          <div className="pillars-container mt-8" style={{ display: 'flex', flexDirection: 'column', gap: '24px', width: '100%', alignItems: 'center' }}>
+          <div className="pillars-container">
             {pillars.map((pillar, i) => (
-              <h3 key={i} className="pillar" style={{ fontSize: 'clamp(24px, 4vw, 40px)', fontWeight: '700', transition: 'none' }}>
+              <h3 key={i} className="pillar">
                 {pillar}
               </h3>
             ))}
           </div>
 
-          <div className="diff-intro-elem">
+          <div className="diff-btn-wrapper">
             <a href="/#contact" className="btn btn-primary mt-8">Talk to Our Team</a>
           </div>
         </div>

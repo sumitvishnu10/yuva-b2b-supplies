@@ -67,7 +67,6 @@
 
 .card-header {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 24px;
 }
@@ -89,19 +88,7 @@
   filter: brightness(1.2);
 }
 
-.card-number {
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--classic-blue);
-  opacity: 0.5;
-  transition: all var(--transition-smooth);
-}
 
-.product-card:hover .card-number {
-  color: var(--blue-slate);
-  opacity: 1;
-}
 
 .card-title {
   font-size: 20px;
