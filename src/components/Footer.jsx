@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logoImage from '../assets/logo.png';
+import logoWhite from '../assets/yuva-logo-white.png';
 import './Footer.css';
 
 export function Footer() {
@@ -10,13 +10,15 @@ export function Footer() {
 
           <div className="footer-brand">
             <Link to="/#home" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="footer-logo-link">
-              <img src={logoImage} alt="YUVA B2B SUPPLIES Logo" className="footer-logo-img" loading="lazy" />
-              <div className="footer-logo-text-wrapper">
-                <span className="footer-logo-text">YUVA</span>
-                <span className="footer-logo-sub">B2B SUPPLIES</span>
+              <div className="footer-branding-top-row">
+                <img src={logoWhite} alt="YUVA B2B SUPPLIES Logo" className="footer-logo-img" loading="lazy" />
+                <div className="footer-logo-text-wrapper">
+                  <span className="footer-brand-name">YUVA</span>
+                  <span className="footer-brand-sub">B2B SUPPLIES</span>
+                </div>
               </div>
+              <span className="footer-brand-tagline">Your Business, Our Supplies, Grow Together</span>
             </Link>
-            <p className="footer-tagline">"One Partner. All Supplies."</p>
             <p className="footer-desc">
               YUVA B2B SUPPLIES is a Chennai-based B2B supply and distribution partner providing office, industrial, packaging, cleaning, safety and workplace supplies for businesses. Serving businesses in Chennai and across South India.
             </p>

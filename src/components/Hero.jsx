@@ -136,10 +136,6 @@ export function Hero() {
         </div>
       </div>
 
-      <a href="#about" className="scroll-indicator">
-        <span className="scroll-text">SCROLL TO EXPLORE</span>
-        <ArrowDown size={16} className="scroll-arrow" />
-      </a>
     </section>
   );
 }

@@ -5,7 +5,6 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { useGSAP } from '@gsap/react';
 
 import { Hero } from '../components/Hero';
-import { TrustStrip } from '../components/TrustStrip';
 import { About } from '../components/About';
 import { Products } from '../components/Products';
 import { Industries } from '../components/Industries';
@@ -27,7 +26,6 @@ export function Home() {
   return (
     <main ref={mainRef}>
       <Hero />
-      <TrustStrip />
       <About />
       <Products />
       <Industries />

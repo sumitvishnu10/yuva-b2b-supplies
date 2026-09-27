@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/yuva-logo.png';
 import './Navbar.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,9 +48,9 @@ export function Navbar() {
           end: "80px top",
           scrub: true,
         },
-        height: "76px",
+        height: "80px",
         backgroundColor: "rgba(255, 255, 255, 0.98)",
-        boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)",
+        boxShadow: "0 4px 20px rgba(88, 161, 211, 0.15)",
         ease: "none"
       });
 
@@ -60,7 +60,7 @@ export function Navbar() {
           end: "80px top",
           scrub: true,
         },
-        height: "44px",
+        height: "52px",
         ease: "none"
       });
     });
@@ -72,9 +72,9 @@ export function Navbar() {
           end: "80px top",
           scrub: true,
         },
-        height: "76px",
+        height: "80px",
         backgroundColor: "rgba(255, 255, 255, 0.98)",
-        boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)",
+        boxShadow: "0 4px 20px rgba(88, 161, 211, 0.15)",
         ease: "none"
       });
     });
@@ -107,7 +107,16 @@ export function Navbar() {
     <header ref={headerRef} className="navbar">
       <div className="container navbar-container">
         <Link to="/#home" onClick={scrollToTop} className="logo-link">
-          <img src={logoImage} alt="YUVA B2B SUPPLIES Logo" className="nav-logo" />
+          <div className="branding-top-row">
+            <img src={logoImage} alt="YUVA B2B SUPPLIES Logo" className="nav-logo" />
+            <div className="branding-text">
+              <span className="brand-name">YUVA</span>
+              <span className="brand-sub">
+                <span className="text-blue">B2B</span> SUPPLIES
+              </span>
+            </div>
+          </div>
+          <span className="brand-tagline">Your Business, Our Supplies, Grow Together</span>
         </Link>
 
         <nav className="desktop-nav">
@@ -121,7 +130,7 @@ export function Navbar() {
           </ul>
         </nav>
 
-        <div className="nav-actions desktop-nav">
+        <div className="nav-actions">
           <Link to="/#contact" className="btn btn-primary">Request a Quote</Link>
         </div>
 
