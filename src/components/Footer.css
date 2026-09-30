@@ -109,6 +109,29 @@
   color: var(--blue-gray);
 }
 
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-icon {
+  flex-shrink: 0;
+  color: var(--powder-blue);
+  margin-top: 1px;
+}
+
+.footer-contact-item span,
+.footer-contact-item .contact-text-wrapper {
+  flex: 1;
+}
+
+.contact-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 32px;

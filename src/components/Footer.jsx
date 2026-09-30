@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import logoWhite from '../assets/yuva-logo-white.png';
 import './Footer.css';
 
@@ -65,9 +66,21 @@ export function Footer() {
           <div className="footer-links">
             <h4 className="footer-heading">CONTACT</h4>
             <ul>
-              <li>+91 94458 35504, +91 98404 15504</li>
-              <li>admin@yuvab2bsupplies.com</li>
-              <li>Plot No. B2, 4th Street, Birla Avenue,<br />Kadhirvedu, Chennai - 600066</li>
+              <li className="footer-contact-item">
+                <Phone className="footer-contact-icon" size={20} />
+                <div className="contact-text-wrapper">
+                  <a href="tel:+919445835504">+91 94458 35504</a>
+                  <a href="tel:+919840415504">+91 98404 15504</a>
+                </div>
+              </li>
+              <li className="footer-contact-item">
+                <Mail className="footer-contact-icon" size={20} />
+                <span>admin@yuvab2bsupplies.com</span>
+              </li>
+              <li className="footer-contact-item">
+                <MapPin className="footer-contact-icon" size={20} />
+                <span>Plot No. B2, 4th Street, Birla Avenue,<br />Kadhirvedu, Chennai - 600066</span>
+              </li>
             </ul>
           </div>
 
